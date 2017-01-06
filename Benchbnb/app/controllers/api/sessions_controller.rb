@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
       render json: @user.errors.full_messages, status: 404
     else
       login!(user)
-      render json: {}
+      render 'users/show'
     end
   end
 
